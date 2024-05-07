@@ -9,10 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-    <UserProvider>
-      <App />
-    </UserProvider>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>,
 )

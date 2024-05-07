@@ -1,19 +1,17 @@
-import Stack from "react-bootstrap/Stack";
-import Container from "react-bootstrap/Container";
-import Sidebar from "/Sidebar";
-import PostForm from "./forms/PostForm";
+import Container from 'react-bootstrap/Container'
+import Stack from 'react-bootstrap/Stack'
+import Sidebar from './Sidebar'
 
-export default function Body({ sidebar, children }) {
+export default function Body({ children }) {
 
-  return (
-    <Container>
-      <Stack direction="horizontal">
-        {sidebar && <Sidebar />}
-        <div className="flex-center">
-          {sidebar && <PostForm />}
-          {children}
-        </div>
-      </Stack>
-    </Container>
-  )
+    return (
+        <Container>
+            <Stack direction='horizontal'>
+                <Sidebar />
+                <Container>
+                    {children}
+                </Container>
+            </Stack>
+        </Container>
+    )
 }
