@@ -1,6 +1,6 @@
 .app {
-  background-color: black;
-  color: white;
+  background-color: rgb(154, 212, 231);
+  color: rgb(250, 245, 245);
   min-height: 100vh;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .main-heading {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #f7f3f3;
   margin-bottom: 1rem;
 }
 
