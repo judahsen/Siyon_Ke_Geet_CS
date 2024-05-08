@@ -1,4 +1,4 @@
-const firebaseConfig = {
+export default{
     apiKey: "AIzaSyBI5-TH5K1ebc8JjJqhyfroybdkC2SQCog",
     authDomain: "siyon-ke-geet-beta.firebaseapp.com",
     projectId: "siyon-ke-geet-beta",
