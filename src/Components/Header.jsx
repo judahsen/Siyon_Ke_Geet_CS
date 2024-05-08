@@ -11,7 +11,7 @@ export default function Header() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="/">
-            सिय्योन के गीत
+          सिय्योन के गीत
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -32,7 +32,7 @@ export default function Header() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            
+
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -43,9 +43,15 @@ export default function Header() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Nav><Nav.Link href="/login"><Image src='src\assets\Account login.svg' height={"40"} />
-              
-            </Nav.Link></Nav>
+          <Nav>
+            {/* <Nav.Link href="/login"><Image src='src\assets\Account login.svg' height={"40"} /></Nav.Link> */}
+            <NavDropdown title=<Image src='src\assets\Account login.svg' height={"40"} /> id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+              <NavDropdown.Item href="/">Logout</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/register">Register new Account</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

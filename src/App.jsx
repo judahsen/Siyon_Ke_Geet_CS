@@ -6,45 +6,45 @@ import Body from './Components/Body'
 import { Login } from './pages/LoginPage'
 import { Register } from './pages/RegisterPage'
 import { Home } from './pages/LandingPage'
-import { SongsPage} from './pages/SongsPage'
-import { Setlists} from './pages/Setlists'
+import { SongsPage } from './pages/SongsPage'
+import { Setlists } from './pages/Setlists'
 import { About } from './pages/About'
-import { createBrowserRouter,RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 
 export default function App() {
-  const router =createBrowserRouter([
+  const router = createBrowserRouter([
     {
-      path:"/",
-      element:<Home></Home>
+      path: "/",
+      element: <Home></Home>
     },
     {
-      path:"/login",
-      element:<Login></Login>
+      path: "/login",
+      element: <Login></Login>
     },
     {
-      path:"/register",
-      element:<Register></Register>
+      path: "/register",
+      element: <Register></Register>
     },
     {
-      path:"/songspage",
-      element:<SongsPage></SongsPage>
+      path: "/songspage",
+      element: <SongsPage></SongsPage>
     },
     {
-      path:"/setlists",
-      element:<Setlists></Setlists>
+      path: "/setlists",
+      element: <Setlists></Setlists>
     },
     {
-      path:"/about",
-      element:<About></About>
+      path: "/about",
+      element: <About></About>
     }
 
   ])
   return (
     <Container fluid className='app'>
       <Header />
-      <RouterProvider router = {router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </Container>
   )
 
