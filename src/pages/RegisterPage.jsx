@@ -1,10 +1,11 @@
-import Body from "../Components/Body";
+import { Container } from "react-bootstrap";
+
 import { RegisterForm } from "../Components/forms/RegisterForm";
 
 export function RegisterPage(){
     return(
-        <Body>
+        <Container>
             <RegisterForm />
-        </Body>
+        </Container>
     )
 }

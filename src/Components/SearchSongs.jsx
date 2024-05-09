@@ -25,17 +25,3 @@ const SearchSongs = ({ onSearch }) => {
 
 export default SearchSongs;
 
-//Fetch API 
-//const searchSongs = async (query) => {
-//   try {
-//     const response = await fetch(`/api/songs?query=${query}`);
-//     if (!response.ok) {
-//       throw new Error('Failed to search for songs');
-//     }
-//     const data = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.error(error);
-//     return null;
-//   }
-// };

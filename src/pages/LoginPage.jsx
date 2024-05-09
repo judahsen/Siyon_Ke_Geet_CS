@@ -1,10 +1,10 @@
-import Body from "../Components/Body"
+import { Container } from "react-bootstrap"
 import { LoginForm } from "../Components/forms/LoginForm"
 
 export function LoginPage() {
     return (
-        <Body>
+        <Container>
             <LoginForm />
-        </Body>
+        </Container>
     )
 }
