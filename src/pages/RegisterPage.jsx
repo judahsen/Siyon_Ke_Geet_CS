@@ -1,33 +1,10 @@
-import {useState} from "react"
-import { getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+import Body from "../Components/Body";
+import { RegisterForm } from "../Components/forms/RegisterForm";
 
-export function Register(){
-    const [email,setEmail] = useState("")
-    const [password,setPassword] = useState("")
-    const auth = getAuth()
-    
-    async function handleRegistration(e){
-        e.preventDefault();
-        // alert(email + ": " + password)
-        createUserWithEmailAndPassword(auth,email,password)
-            .then((user) => {
-                // Success
-                alert("User created")
-                console.log(user)
-            })
-            .catch((error) => {
-                alert("Try Again Please")
-                console.log(error)
-            })
-    }
-
-    return <div>
-    <h1>This is the register page</h1>
-    <form action="#">
-        <input onChange={(e) => {setEmail(e.target.value)}} type="text" placeholder="Email"/>
-        <input onChange={(e) => {setPassword(e.target.value)}} type="text" placeholder="Password"/>
-        <button onClick= {(e) => {handleRegistration(e)}}>Register</button>
-    </form>
-    
-    </div>
+export function RegisterPage(){
+    return(
+        <Body>
+            <RegisterForm />
+        </Body>
+    )
 }

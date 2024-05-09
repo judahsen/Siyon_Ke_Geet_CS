@@ -1,18 +1,16 @@
-
-
 import Container from 'react-bootstrap/Container'
 import Header from './Components/Header'
 import Body from './Components/Body'
-import { Login } from './pages/LoginPage'
-import { Logout } from './pages/Logout'
-import { Register } from './pages/RegisterPage'
+import { LoginPage } from './pages/LoginPage'
+import { Logout } from './Components/Logout'
+import { RegisterPage } from './pages/RegisterPage'
 import { Home } from './pages/LandingPage'
 import { SongsPage } from './pages/SongsPage'
-import { Setlists } from './pages/Setlists'
+import { Setlists } from './Components/Setlists'
 import { About } from './pages/About'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthContext } from './Context/AuthContext'
-import { Protected } from './pages/Protected'
+import { Protected } from './Components/Protected'
 
 
 
@@ -24,11 +22,11 @@ export default function App() {
     },
     {
       path: "/login",
-      element: <Login></Login>
+      element: <LoginPage></LoginPage>
     },
     {
       path: "/register",
-      element: <Register></Register>
+      element: <RegisterPage></RegisterPage>
     },
     {
       path: "/songspage",
