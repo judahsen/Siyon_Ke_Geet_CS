@@ -28,7 +28,7 @@ export function LoginForm(){
     return <div>
     <h1>This is the Login page</h1>
     <form action="#">
-        <input onChange={(e) => {setEmail(e.target.value)}} type="text" placeholder="Email"/>
+        <input onChange={(e) => {setEmail(e.target.value)}} type="Email" placeholder="Email"/>
         <input onChange={(e) => {setPassword(e.target.value)}} type="Password" placeholder="Password"/>
         <button onClick= {(e) => {handleLogin(e)}}>Login</button>
         <Nav.Link href="/register">Register a new account ?</Nav.Link>

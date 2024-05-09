@@ -24,8 +24,8 @@ export function RegisterForm(){
     return <div>
     <h1>This is the register page</h1>
     <form action="#">
-        <input onChange={(e) => {setEmail(e.target.value)}} type="text" placeholder="Email"/>
-        <input onChange={(e) => {setPassword(e.target.value)}} type="text" placeholder="Password"/>
+        <input onChange={(e) => {setEmail(e.target.value)}} type="Email" placeholder="Email"/>
+        <input onChange={(e) => {setPassword(e.target.value)}} type="Password" placeholder="Password"/>
         <button onClick= {(e) => {handleRegistration(e)}}>Register</button>
     </form>
     
