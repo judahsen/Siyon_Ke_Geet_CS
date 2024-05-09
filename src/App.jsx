@@ -11,6 +11,8 @@ import { SongsPage } from './pages/SongsPage'
 import { Setlists } from './pages/Setlists'
 import { About } from './pages/About'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { AuthContext } from './Context/AuthContext'
+import { Protected } from './pages/Protected'
 
 
 
@@ -34,7 +36,7 @@ export default function App() {
     },
     {
       path: "/setlists",
-      element: <Setlists></Setlists>
+      element: <Protected><Setlists></Setlists></Protected>
     },
     {
       path: "/about",
@@ -49,7 +51,9 @@ export default function App() {
   return (
     <Container fluid className='app'>
       <Header />
+      <AuthContext>
       <RouterProvider router={router}></RouterProvider>
+      </AuthContext>
     </Container>
   )
 

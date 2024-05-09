@@ -47,7 +47,7 @@ export default function Header() {
             {/* <Nav.Link href="/login"><Image src='src\assets\Account login.svg' height={"40"} /></Nav.Link> */}
             <NavDropdown title=<Image src='src\assets\Account login.svg' height={"40"} /> id="navbarScrollingDropdown">
               <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-              <NavDropdown.Item href="/">Logout</NavDropdown.Item>
+              <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/register">Register new Account</NavDropdown.Item>
             </NavDropdown>
