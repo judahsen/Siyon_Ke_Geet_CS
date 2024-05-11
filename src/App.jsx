@@ -61,8 +61,8 @@ import AudioPlayerPage from './pages/MediaPlayer';
 // }
 export default function App() {
   return (
-    <Container>
-    <Header/>
+    <Container fluid className='app'>
+    <Header />
     <AuthProvider>
       <Router>
         <Routes>

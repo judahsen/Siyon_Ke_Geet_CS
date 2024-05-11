@@ -1,36 +1,31 @@
-// import { useState } from 'react';
-// import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import axios from 'axios';
 
-// const SearchSongs = () => {
-//   const [query, setQuery] = useState('');
-//   const [searchResults, setSearchResults] = useState(null);
+function SearchBar() {
+  const [searchTerm, setSearchTerm] = useState('');
 
-//   const handleSearch = async () => {
-//     const response = await axios.get(`/api/search`, { params: { query } });
-//     setSearchResults(response.data.tracks);
-//   };
+  const handleSearch = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.get(`/api/songs/search?query=${searchTerm}`);
+      console.log(response.data);  // Log the response data from the server
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
-//   return (
-//     <div>
-//       <h1>Search for Songs</h1>
-//       <input value={query} onChange={(e) => setQuery(e.target.value)} />
-//       <button onClick={handleSearch}>Search</button>
+  return (
+    <form onSubmit={handleSearch}>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search for songs"
+      />
+      <button type="submit">Search</button>
+    </form>
+  );
+}
 
-//       {searchResults && (
-//         <ul>
-//           {searchResults.map((result) => (
-//             <li key={result.id}>
-//               <p>{result.name} by {result.artists}</p>
-//               <Link to={`/lyrics/${result.id}`}>View Lyrics</Link> |
-//               <Link to={`/audio/${result.id}`}>Play Audio</Link>
-//             </li>
-//           ))}
-//         </ul>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default SearchSongs;
+export default SearchBar;
 

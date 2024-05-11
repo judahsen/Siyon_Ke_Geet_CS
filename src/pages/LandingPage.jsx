@@ -2,6 +2,15 @@ import { Container } from "react-bootstrap";
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route
+  } from 'react-router-dom';
+import SearchBar from "../Components/SearchSongs";
+import SongList from "../Components/SongIndex";
+import SongDetails from "../Components/SongsDetail";
+
 
 
 
@@ -21,23 +30,12 @@ export function Home() {
             <h2>having the basic functionality to read Lyrics and possibly chords/tabs,</h2>
             <h2>quickly refer to the tune of a part of a song if you feel like you are forgetting something,</h2>
             <h2>And create setlists for quick access to song Data as needed</h2>
-            <div>
-                <h1>Search for Songs</h1>
-                <input value={query} onChange={(e) => setQuery(e.target.value)} />
-                <button onClick={handleSearch}>Search</button>
-
-                {searchResults && (
-                    <ul>
-                        {searchResults.map((result) => (
-                            <li key={result.id}>
-                                <p>{result.name} by {result.artists}</p>
-                                <Link to={`/lyrics/${result.id}`}>View Lyrics</Link> |
-                                <Link to={`/audio/${result.id}`}>Play Audio</Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </div>
+            <Routes>
+                <Route path="/" element={<SearchBar />} />
+                <Route path="/songs" element={<SongList />} />
+                <Route path="/songs/:id" element={<SongDetails />} />
+            </Routes>
+            
         </Container>
 
     )
