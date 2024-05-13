@@ -1,22 +1,22 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Card, Container,Row } from 'react-bootstrap';
 
 function SongDetails() {
-  const { id } = useParams();
-
-  // Dummy data for a single song
-  const song = {
-    id,
-    title: 'Song One',
-    artist: 'Artist One',
-    lyrics: 'Here are the song lyrics...'
-  };
 
   return (
-    <div>
-      <h2>{song.title} - {song.artist}</h2>
-      <p>{song.lyrics}</p>
-    </div>
+    <Container>
+      <Row className="mx-2 row row-cols-4">
+        <Card>
+          <Card.Img src='#' />
+          <Card.Body>
+            <Card.Title>Album Name</Card.Title>
+          </Card.Body>
+        </Card>
+        
+      </Row>
+    </Container>
+
   );
 }
 

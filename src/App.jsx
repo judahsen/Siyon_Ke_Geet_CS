@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './Context/AuthProvider'
 import LyricsPage from './pages/Lyrics';
 import AudioPlayerPage from './pages/MediaPlayer';
+import SongDetails from './Components/SongsDetail'
 
 
 
@@ -71,7 +72,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/lyrics/:trackId" element={<LyricsPage />} />
+          <Route path="/songresults" element={<SongDetails />} />
           <Route path="/audio/:trackId" element={<AudioPlayerPage />} />
           <Route path="/setlists" element={<PlaylistManagerPage />} />
         </Routes>
