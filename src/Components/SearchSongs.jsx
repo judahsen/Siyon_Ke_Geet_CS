@@ -94,6 +94,7 @@ function SearchBar() {
                 <Card.Subtitle>Release Date : {album.release_date}</Card.Subtitle>
                 <Card.Subtitle>Album Has {album.total_tracks} tracks</Card.Subtitle>
               </Card.Body>
+              <Button>Add to Playlist</Button>
             </Card>
               )
             })}
