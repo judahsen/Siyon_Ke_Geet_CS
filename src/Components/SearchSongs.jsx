@@ -53,7 +53,7 @@ function SearchBar() {
     // Get request with Artist ID grab all the albums from that artist
     var returnedAlbums = await fetch("https://api.spotify.com/v1/artists/" + artistID + '/albums' + '?include_groups=album&market=US&limit=50', searchParameters)
       .then(response => response.json())
-      .then(data => { 
+      .then(data => {
         console.log(data);
         setAlbums(data.items)
       })
@@ -87,18 +87,19 @@ function SearchBar() {
             {albums.map((album, i) => {
               console.log(album);
               return (
-                <Card>
-              <Card.Img src={album.images[0].url} />
-              <Card.Body>
-                <Card.Title>{album.name}</Card.Title>
-                <Card.Subtitle>Release Date : {album.release_date}</Card.Subtitle>
-                <Card.Subtitle>Album Has {album.total_tracks} tracks</Card.Subtitle>
-              </Card.Body>
-              <Button>Add to Playlist</Button>
-            </Card>
+                <Card style={{ padding: '25px' }}>
+                  <Card.Img src={album.images[0].url} />
+                  <Card.Body>
+                    <Card.Title>{album.name}</Card.Title>
+                    <Card.Subtitle>Release Date : {album.release_date}</Card.Subtitle>
+                    <Card.Subtitle>Album Has {album.total_tracks} tracks</Card.Subtitle>
+                  </Card.Body>
+                  <Button style={{ margin: '10px' }}>Add to Playlist</Button>
+                  <Button href='/setlists'>Go to Playlist</Button>
+                </Card>
               )
             })}
-            
+
 
           </Row>
         </Container>

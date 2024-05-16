@@ -27,7 +27,7 @@ export default function Header() {
             <NavDropdown title="Songs" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/songspage">Song list</NavDropdown.Item>
               <NavDropdown.Item href="/setlists">
-                playlist
+                Playlist
               </NavDropdown.Item>
             </NavDropdown>
 
